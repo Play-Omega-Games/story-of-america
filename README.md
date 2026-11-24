@@ -19,8 +19,10 @@ A bot loads `plans/story-of-america.json` (about 10 minutes a reading), `plans/s
 Each plan has `meta`, `chapters`, `readings`, `famous_stories` and `famous_nights`.
 
 - `readings` (This Country of Ours, 99 chapters in 7 parts): `id`, `chapter`, `title`, `part_of_book`, `reading` and `of` (part of the chapter), `words`, `minutes` (at 150 words a minute), `word_offset` (within the chapter), `starts_with`, `ends_with`, `timeline` (`when`, `event`), `content`, `standards`, `text`. In the 5-minute plan, `parent` names the 10-minute reading each part comes from.
-- `famous_stories`: the same fields without chapter and timeline; `famous_nights` groups them into nights in book order.
-- `content`: `severity` (none, low, medium, high), `topics`, `note` (a short note for grown-ups, shown before medium and high readings) and, for high readings, `skip_summary` (one line in our own words for families who skip it).
+- `famous_stories`: `id`, `story`, `title`, `reading` and `of`, `words`, `minutes`, `word_offset`, `starts_with`, `ends_with`, `content`, `standards`, `text` (and `parent` in the 5-minute plan). No chapter or timeline fields. `famous_nights` groups them into nights of 1 to 4 entries, in book order.
+- `chapters`: `title` is the display title; where the transcription's heading differs from the 1917 printing, the original is kept in `source_heading` (chapter 51).
+- `content`: `severity` (none, low, medium, high), `topics`, `note` (a short note for grown-ups, shown before medium and high readings) and, for high readings, `skip_summary` (one line in our own words for families who skip it). In the 5-minute plan every part of a high reading carries its parent's `skip_summary`, so skipping any part is covered; the bot shows it once per parent.
+- `meta.next_shelf`: bots suggested for the next shelf. A `link` of null (with `link_note`) means that bot isn't published yet, and the bot leaves it off the card.
 - `standards`: the activity in the bot that supports practice toward each code (`framework`, `code`, `band`, `activity`, `wording`, `source`, `verified`). Code text is in `plans/standards.json`. Not accredited, and not a replacement for any state requirement.
 
 Reading text is copied word for word. The build only joins hard-wrapped lines, keeps verse line breaks, drops picture markers and italic underscores, and splits chapters at paragraph breaks. Original spellings, including the 1896 book's syllable hyphens, are kept.

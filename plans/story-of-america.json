@@ -39,6 +39,7 @@
     "name": "100 Years Ago Today",
     "shelf": "Scholar Shelf",
     "link": null,
+    "link_note": "Not published yet. The link is added after the bot is published; until then the card leaves it out.",
     "why": "A real newspaper front page from 100 years ago each morning, family mode for ages 10 and up.",
     "when": "around ages 11 to 12, or when Story of America is finished"
    },
@@ -656,8 +657,9 @@
   {
    "id": "tcoo-51",
    "chapter": 51,
-   "title": "The Boston Tea party",
+   "title": "The Boston Tea-Party",
    "part": "Part VI: Stories of the Struggle for Liberty",
+   "source_heading": "The Boston Tea party",
    "timeline": {
     "when": "1773",
     "event": "The Boston Tea Party"
@@ -5746,7 +5748,7 @@
    "chapter": 51,
    "chapter_id": "tcoo-51",
    "part_of_book": "Part VI: Stories of the Struggle for Liberty",
-   "title": "The Boston Tea party",
+   "title": "The Boston Tea-Party",
    "reading": 1,
    "of": 1,
    "words": 1308,

@@ -39,6 +39,7 @@
     "name": "100 Years Ago Today",
     "shelf": "Scholar Shelf",
     "link": null,
+    "link_note": "Not published yet. The link is added after the bot is published; until then the card leaves it out.",
     "why": "A real newspaper front page from 100 years ago each morning, family mode for ages 10 and up.",
     "when": "around ages 11 to 12, or when Story of America is finished"
    },
@@ -656,8 +657,9 @@
   {
    "id": "tcoo-51",
    "chapter": 51,
-   "title": "The Boston Tea party",
+   "title": "The Boston Tea-Party",
    "part": "Part VI: Stories of the Struggle for Liberty",
+   "source_heading": "The Boston Tea party",
    "timeline": {
     "when": "1773",
     "event": "The Boston Tea Party"
@@ -3340,7 +3342,8 @@
     "topics": [
      "violence"
     ],
-    "note": "This chapter tells how Spanish soldiers killed French prisoners who had surrendered. It is upsetting; you may want to read it first."
+    "note": "This chapter tells how Spanish soldiers killed French prisoners who had surrendered. It is upsetting; you may want to read it first.",
+    "skip_summary": "The Spanish leader Menéndez caught the French who had survived in Florida; many who surrendered were killed, and Spain kept Florida."
    },
    "standards": [
     {
@@ -3389,7 +3392,8 @@
     "topics": [
      "violence"
     ],
-    "note": "This chapter tells how Spanish soldiers killed French prisoners who had surrendered. It is upsetting; you may want to read it first."
+    "note": "This chapter tells how Spanish soldiers killed French prisoners who had surrendered. It is upsetting; you may want to read it first.",
+    "skip_summary": "The Spanish leader Menéndez caught the French who had survived in Florida; many who surrendered were killed, and Spain kept Florida."
    },
    "standards": [
     {
@@ -3508,7 +3512,8 @@
      "violence",
      "native_framing"
     ],
-    "note": "This chapter is about revenge: prisoners are hanged and soldiers are killed in battle. This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land."
+    "note": "This chapter is about revenge: prisoners are hanged and soldiers are killed in battle. This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land.",
+    "skip_summary": "A Frenchman, Dominique de Gourgues, sailed to Florida, took the Spanish forts with Native allies to avenge his countrymen, and went home to France."
    },
    "standards": [
     {
@@ -3567,7 +3572,8 @@
      "violence",
      "native_framing"
     ],
-    "note": "This chapter is about revenge: prisoners are hanged and soldiers are killed in battle. This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land."
+    "note": "This chapter is about revenge: prisoners are hanged and soldiers are killed in battle. This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land.",
+    "skip_summary": "A Frenchman, Dominique de Gourgues, sailed to Florida, took the Spanish forts with Native allies to avenge his countrymen, and went home to France."
    },
    "standards": [
     {
@@ -4398,7 +4404,8 @@
      "violence",
      "accuracy"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. The rescue by Pocahontas is told as fact; historians are not sure it happened as Smith told it."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. The rescue by Pocahontas is told as fact; historians are not sure it happened as Smith told it.",
+    "skip_summary": "John Smith was captured by Powhatan's warriors while exploring, was brought before the great chief, and was later sent back to Jamestown."
    },
    "standards": [
     {
@@ -5455,7 +5462,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. This chapter tells the 1622 attack on the colony as treachery and leaves out why the Powhatan people were losing their land. The chapter title uses an old word too."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. This chapter tells the 1622 attack on the colony as treachery and leaves out why the Powhatan people were losing their land. The chapter title uses an old word too.",
+    "skip_summary": "After years of peace, the Powhatan people, losing more and more of their land, attacked the Virginia settlements in 1622, and a long, hard war followed."
    },
    "standards": [
     {
@@ -5514,7 +5522,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. This chapter tells the 1622 attack on the colony as treachery and leaves out why the Powhatan people were losing their land. The chapter title uses an old word too."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. This chapter tells the 1622 attack on the colony as treachery and leaves out why the Powhatan people were losing their land. The chapter title uses an old word too.",
+    "skip_summary": "After years of peace, the Powhatan people, losing more and more of their land, attacked the Virginia settlements in 1622, and a long, hard war followed."
    },
    "standards": [
     {
@@ -7322,7 +7331,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. The Pequot War ended with the English burning a Pequot village at Mystic, where hundreds of people died."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. The Pequot War ended with the English burning a Pequot village at Mystic, where hundreds of people died.",
+    "skip_summary": "The English colonists of Connecticut went to war with the Pequot people in 1637, and the war ended with a Pequot village destroyed and the Pequot nation broken apart."
    },
    "standards": [
     {
@@ -7611,7 +7621,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. King Philip (Metacom) was fighting to keep his people's land. This chapter has frightening raid scenes."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. King Philip (Metacom) was fighting to keep his people's land. This chapter has frightening raid scenes.",
+    "skip_summary": "Metacom, called King Philip by the English, led a war to stop settlers taking his people's land; after a year of fighting on both sides he was killed and the war ended."
    },
    "standards": [
     {
@@ -9129,7 +9140,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. It calls the Tuscarora \"crafty\"; they were going to war over stolen land and enslaved family members. This chapter has frightening attack scenes."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. It calls the Tuscarora \"crafty\"; they were going to war over stolen land and enslaved family members. This chapter has frightening attack scenes.",
+    "skip_summary": "The Carolinas quarreled with their governors, fought wars with the Tuscarora and Yamasee nations, and afterward became royal colonies."
    },
    "standards": [
     {
@@ -9188,7 +9200,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. It calls the Tuscarora \"crafty\"; they were going to war over stolen land and enslaved family members. This chapter has frightening attack scenes."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. It calls the Tuscarora \"crafty\"; they were going to war over stolen land and enslaved family members. This chapter has frightening attack scenes.",
+    "skip_summary": "The Carolinas quarreled with their governors, fought wars with the Tuscarora and Yamasee nations, and afterward became royal colonies."
    },
    "standards": [
     {
@@ -10657,7 +10670,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. Pontiac was an Odawa leader trying to stop British rule over his people's land."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. Pontiac was an Odawa leader trying to stop British rule over his people's land.",
+    "skip_summary": "After France lost Canada, the Odawa leader Pontiac planned to drive the British from the forts on his people's land, and a young Native woman warned the fort at Detroit."
    },
    "standards": [
     {
@@ -10776,7 +10790,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. Pontiac was an Odawa leader trying to stop British rule over his people's land."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. Pontiac was an Odawa leader trying to stop British rule over his people's land.",
+    "skip_summary": "Pontiac's plan at Detroit failed, his war went on for nearly three years, and at last he made peace."
    },
    "standards": [
     {
@@ -10825,7 +10840,7 @@
    "chapter": 51,
    "chapter_id": "tcoo-51",
    "part_of_book": "Part VI: Stories of the Struggle for Liberty",
-   "title": "The Boston Tea party",
+   "title": "The Boston Tea-Party",
    "reading": 1,
    "of": 2,
    "parent": "tcoo-51-1",
@@ -10875,7 +10890,7 @@
    "chapter": 51,
    "chapter_id": "tcoo-51",
    "part_of_book": "Part VI: Stories of the Struggle for Liberty",
-   "title": "The Boston Tea party",
+   "title": "The Boston Tea-Party",
    "reading": 2,
    "of": 2,
    "parent": "tcoo-51-1",
@@ -13666,7 +13681,8 @@
      "native_framing",
      "violence"
     ],
-    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. Tecumseh was a Shawnee leader uniting nations to keep their land. A war speech in this chapter is frightening."
+    "note": "This book was written in 1917. It often calls Native Americans \"savages\" or \"Redmen\" and tells events mostly from the settlers' side. Today we say Native Americans or use each nation's own name, and we know these nations were defending their homes and land. Tecumseh was a Shawnee leader uniting nations to keep their land. A war speech in this chapter is frightening.",
+    "skip_summary": "James Madison became President; the Shawnee leader Tecumseh worked to unite many nations to keep their land, and his brother the Prophet's warriors were defeated at Tippecanoe."
    },
    "standards": [
     {
@@ -15335,7 +15351,8 @@
     "topics": [
      "religion"
     ],
-    "note": "This book was written in 1917. It speaks unkindly about Joseph Smith and the Latter-day Saints, a church with millions of members today. It tells their story only from their opponents' side."
+    "note": "This book was written in 1917. It speaks unkindly about Joseph Smith and the Latter-day Saints, a church with millions of members today. It tells their story only from their opponents' side.",
+    "skip_summary": "James Buchanan became President, Minnesota and Oregon joined the Union, and the Latter-day Saints moved west to Utah, where they and the government came into conflict."
    },
    "standards": [
     {
@@ -16908,7 +16925,8 @@
      "race",
      "accuracy"
     ],
-    "note": "This book was written in 1917 and uses old words for Black Americans that we don't use today. Today we say Black Americans or enslaved people. This chapter says newly freed Black voters were ignorant and that Reconstruction was a wretched time. Historians today disagree: Black Americans voted, served in Congress and helped rebuild the South, and the end of Reconstruction took many of those rights away."
+    "note": "This book was written in 1917 and uses old words for Black Americans that we don't use today. Today we say Black Americans or enslaved people. This chapter says newly freed Black voters were ignorant and that Reconstruction was a wretched time. Historians today disagree: Black Americans voted, served in Congress and helped rebuild the South, and the end of Reconstruction took many of those rights away.",
+    "skip_summary": "After Lincoln's death Andrew Johnson became President; he fought with Congress over Reconstruction and was impeached but not removed, and the country bought Alaska from Russia."
    },
    "standards": [
     {

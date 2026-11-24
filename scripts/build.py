@@ -257,6 +257,10 @@ def build():
         readings, chapters_meta, stories = [], [], []
         for ch in M:
             cid = f"tcoo-{ch['num']:02d}"
+            ch = dict(ch)
+            if ch["num"] in curation.TITLE_FIXES:
+                ch["source_heading"] = ch["title"]
+                ch["title"] = curation.TITLE_FIXES[ch["num"]][0]
             tl = curation.TIMELINE[ch["num"]]
             std_parts = split_parts(ch["paras"], MAX_WORDS)
             rows, offset = [], 0
@@ -275,17 +279,14 @@ def build():
                     base["parent"] = parent
                 e, t = entry(base, sub, off)
                 e["timeline"] = {"when": tl[0], "event": tl[1]}
-                cc = dict(c)
-                if length == "5" and "skip_summary" in cc:
-                    # the summary is shown once, on the first short part of a skipped parent
-                    first = next(i for i, r in enumerate(rows) if r[0] == parent)
-                    if idx - 1 != first:
-                        cc.pop("skip_summary")
-                e["content"] = cc
+                # every part inherits its 10-minute parent's content, skip_summary included;
+                # the skill shows a summary once per parent when it skips that parent's parts
+                e["content"] = dict(c)
                 e["standards"] = america_standards(c, idx == len(rows))
                 e["text"] = t
                 readings.append(e)
             chapters_meta.append({"id": cid, "chapter": ch["num"], "title": ch["title"], "part": ch["part"],
+                                  **({"source_heading": ch["source_heading"]} if "source_heading" in ch else {}),
                                   "timeline": {"when": tl[0], "event": tl[1]},
                                   "words": sum(words(p["text"]) for p in ch["paras"]), "readings": len(rows)})
         for st in B:

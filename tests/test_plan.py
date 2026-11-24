@@ -91,8 +91,12 @@ def plan_checks(plan, label, cap):
         c = r["content"]
         if c["severity"] in ("medium", "high"):
             check(bool(c["note"]), f"{label} {r['id']} {c['severity']} without a note")
+    fneed = {"id", "title", "text", "words", "minutes", "story", "reading", "of", "content", "standards"}
     for s in plan["famous_stories"]:
+        check(fneed <= set(s), f"{label} {s.get('id')} missing fields")
         check(s["words"] <= cap, f"{label} {s['id']} over cap")
+    for x in plan["meta"]["next_shelf"]:
+        check(x["link"] or x.get("link_note"), f"{label}: Next shelf {x['name']} has no link and no note")
     by = {}
     for r in plan["readings"]:
         by.setdefault(r["chapter"], []).append(r)
@@ -117,10 +121,20 @@ for plan, label, cap in ((p10, "10min", 1800), (p5, "5min", 750)):
     plan_checks(plan, label, cap)
     source_checks(plan, label)
 
+# display title fix (1917 printing), reading text untouched
+for plan in (p10, p5):
+    c51 = plan["chapters"][50]
+    check(c51["title"] == "The Boston Tea-Party" and c51.get("source_heading") == "The Boston Tea party",
+          "chapter 51 display title")
+    check(all(r["title"] == "The Boston Tea-Party" for r in plan["readings"] if r["chapter"] == 51), "chapter 51 reading titles")
+
 # 10-minute plan: content decisions
 high = [r for r in p10["readings"] if r["content"]["severity"] == "high"]
 check(len(high) == 12, f"expected 12 high readings, found {len(high)}")
 check(all(r["content"].get("skip_summary") for r in high), "a high reading has no skip summary")
+high5 = [r for r in p5["readings"] if r["content"]["severity"] == "high"]
+check(len(high5) == 28 and len({r["parent"] for r in high5}) == 12, "5-minute high parts should be 28 from 12 readings")
+check(all(r["content"].get("skip_summary") for r in high5), "a 5-minute high part has no skip summary")
 
 # paragraph boundaries: 10-minute readings are whole paragraphs of their chapter, and
 # 5-minute parts join back exactly into their 10-minute parent
@@ -136,7 +150,8 @@ for parent, rs in kids.items():
     for x in rs:
         check(x["content"]["severity"] == pr["content"]["severity"], f"{x['id']} severity differs from parent")
     if pr["content"]["severity"] == "high":
-        check(sum(1 for x in rs if x["content"].get("skip_summary")) == 1, f"{parent}: skip summary not exactly once")
+        check(all(x["content"].get("skip_summary") == pr["content"]["skip_summary"] for x in rs),
+              f"{parent}: a 5-minute part does not carry its parent's skip summary")
 allparas = set()
 for r in p10["readings"]:
     allparas.update(r["text"].split("\n\n"))

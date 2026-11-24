@@ -143,6 +143,7 @@ SKIP_SUMMARY = {
 # Next shelf card (Omega Home Library shared engine). Only bots with a live link are shown to owners.
 NEXT_SHELF = [
  {"name": "100 Years Ago Today", "shelf": "Scholar Shelf", "link": None,
+  "link_note": "Not published yet. The link is added after the bot is published; until then the card leaves it out.",
   "why": "A real newspaper front page from 100 years ago each morning, family mode for ages 10 and up.",
   "when": "around ages 11 to 12, or when Story of America is finished"},
  {"name": "Founders' Reading Plan", "shelf": "Scholar Shelf", "link": "https://x.ai/bot/OiJ2yft0AxrfrCdRAgFYu",
@@ -173,3 +174,10 @@ ACTIVITIES = {
  "lesson": "Famous Stories: the question about the story's lesson",
 }
 VERIFIED = "2026-11-24"
+
+# Display titles where the transcription's chapter heading differs from the 1917 printing.
+# Reading text is never changed; the original heading is kept in chapters[].source_heading.
+TITLE_FIXES = {
+ 51: ("The Boston Tea-Party", "The 1917 Doran printing reads THE BOSTON TEA-PARTY at the chapter head and "
+      "The Boston Tea-Party in its contents; the transcription's heading reads The Boston Tea party."),
+}
