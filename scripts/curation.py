@@ -142,9 +142,8 @@ SKIP_SUMMARY = {
 
 # Next shelf card (Omega Home Library shared engine). Only bots with a live link are shown to owners.
 NEXT_SHELF = [
- {"name": "100 Years Ago Today", "shelf": "Scholar Shelf", "link": None,
-  "link_note": "Not published yet. The link is added after the bot is published; until then the card leaves it out.",
-  "why": "A real newspaper front page from 100 years ago each morning, family mode for ages 10 and up.",
+ {"name": "100 Years Ago Today", "shelf": "Scholar Shelf", "link": "https://x.ai/bot/5QXnAseS4QUrUnawaXEei",
+  "why": "A real newspaper front page from 100 years ago each morning, family mode for ages 8 and up.",
   "when": "around ages 11 to 12, or when Story of America is finished"},
  {"name": "Founders' Reading Plan", "shelf": "Scholar Shelf", "link": "https://x.ai/bot/OiJ2yft0AxrfrCdRAgFYu",
   "why": "America's founding texts, about fifteen minutes a day, for older readers and grown-ups.",
