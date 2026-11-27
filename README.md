@@ -33,7 +33,7 @@ Reading text is copied word for word. The build only joins hard-wrapped lines, k
 - `scripts/build.py`: `python3 scripts/build.py --fetch` downloads the sources into `./src` and rebuilds `plans/` (standard library only). `scripts/curation.py`: timeline labels, reviewed content notes, skip summaries, Next shelf and standards. `scripts/scan.py`: the content scan used by the build.
 - `scripts/check_links.py`: downloads the sources live and checks every reading against them; `--raw` also checks the files served from this repo.
 - `scripts/check_standards.py`: downloads the official standards documents and checks every code's text word for word (needs `pdftotext`).
-- `tests/test_plan.py`: offline checks: word for word against the source, nothing added or dropped, paragraph-only splits, caps, notes and tags.
+- `tests/test_plan.py`: offline checks: word for word against the source, nothing added or dropped, paragraph-only splits, caps, notes and tags, the CCSS notice in `plans/standards.json`, and that a rebuild reproduces `plans/standards.json` byte for byte.
 - `MANIFEST.txt`: every file with its size and SHA-256, for loading by raw URL.
 
 ## License

@@ -7,7 +7,8 @@ For both plans/story-of-america.json (about 10 minutes) and plans/story-of-ameri
   and all of them joined equal the whole source: nothing added, nothing dropped;
 - readings are split only at paragraph breaks (5-minute parts join back into their 10-minute parent);
 - no reading runs past its cap; every high reading has a note and a skip summary;
-- every standards tag points at plans/standards.json and a known activity.
+- every standards tag points at plans/standards.json and a known activity;
+- standards.json carries the CCSS notice, and (with src/) a rebuild reproduces it byte for byte.
 Prints plan lengths per pace. Run from the repo root: python3 tests/test_plan.py
 """
 import datetime, json, os, re, sys
@@ -194,6 +195,25 @@ for r in p10["readings"] + p10["famous_stories"]:
     for t in r["standards"]:
         tags[t["code"]] = tags.get(t["code"], 0) + 1
 print("Standards tags (10-minute plan):", tags)
+
+# CCSS public license notice: present in standards.json, and a rebuild reproduces the file byte for byte
+CCSS_NOTICE = ("\u00a9 Copyright 2010. National Governors Association Center for Best Practices "
+               "and Council of Chief State School Officers. All rights reserved.")
+check(std["meta"].get("attribution") == CCSS_NOTICE, "standards.json meta.attribution is not the CCSS notice")
+if m_src is None or b_src is None:
+    print("note: src/ not present; skipping the rebuild check for plans/standards.json")
+else:
+    import shutil, subprocess, tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        shutil.copytree(os.path.join(ROOT, "scripts"), os.path.join(tmp, "scripts"),
+                        ignore=shutil.ignore_patterns("__pycache__"))
+        shutil.copytree(os.path.join(ROOT, "src"), os.path.join(tmp, "src"))
+        r = subprocess.run([sys.executable, os.path.join("scripts", "build.py")], cwd=tmp, capture_output=True, text=True)
+        check(r.returncode == 0, "rebuild failed: " + (r.stdout + r.stderr)[-300:])
+        if r.returncode == 0:
+            same = open(os.path.join(tmp, "plans", "standards.json"), "rb").read() == open(PSTD, "rb").read()
+            check(same, "rebuild does not reproduce plans/standards.json byte for byte")
+            print("Rebuild reproduces plans/standards.json byte for byte:", same)
 if fails:
     print(f"FAIL ({len(fails)}):\n" + "\n".join(fails[:60]))
     sys.exit(1)
