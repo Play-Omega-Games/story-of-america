@@ -341,7 +341,8 @@ def build():
     json.dump(plans["5"], open(OUT_SHORT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     std = {"meta": {"verified": curation.VERIFIED, "wording": "supports practice toward",
                     "activities": curation.ACTIVITIES,
-                    "note": "Code text copied word for word from the official documents named in source. Not accredited."},
+                    "note": "Code text copied word for word from the official documents named in source. Not accredited.",
+                    "attribution": "© Copyright 2010. National Governors Association Center for Best Practices and Council of Chief State School Officers. All rights reserved."},
            "standards": [dict(code=k, **v) for k, v in curation.STANDARDS.items()]}
     json.dump(std, open(OUT_STD, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     return plans
